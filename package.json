@@ -50,8 +50,7 @@
   },
   "lint-staged": {
     "*.{ts,js,json,sol}": [
-      "prettier --write",
-      "npx hardhat test"
+      "prettier --write"
     ],
     "*.{ts,js,json}": [
       "eslint --cache --fix"
