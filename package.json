@@ -1,0 +1,23 @@
+{
+  "name": "solidity-erc721",
+  "version": "1.0.0",
+  "description": "In this course we will learn how to create and deploy a generative \"10k\"-style NFT smart contract on ethereum-based networks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.4",
+    "hardhat": "^2.9.3",
+    "solhint": "^3.3.7"
+  }
+}
