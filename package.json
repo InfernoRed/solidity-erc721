@@ -4,7 +4,9 @@
   "description": "In this course we will learn how to create and deploy a generative \"10k\"-style NFT smart contract on ethereum-based networks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter mocha-junit-reporter --timeout 60000 --exit",
+    "lint": "eslint --ext .ts,.js,.json,.sol .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +36,9 @@
     "ethers": "^5.6.4",
     "hardhat": "^2.9.3",
     "hardhat-gas-reporter": "^1.0.8",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "mocha": "^9.2.2",
     "prettier": "^2.6.2",
     "prettier-plugin-solidity": "^1.0.0-beta.13",
     "solhint": "^3.3.7",
@@ -41,5 +46,11 @@
     "ts-node": "^10.7.0",
     "typechain": "^5.2.0",
     "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,sol}": [
+      "eslint --cache --fix",
+      "npx hardhat test"
+    ]
   }
 }
