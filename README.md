@@ -12,7 +12,7 @@ This style of project is excellent as an introduction to blockchain development 
 
 This course is self guided and can be completed individually or as a group. The first thing you should do is read this readme in it's entiretly before getting started. Each section has a github issue associated with it that includes more details and instructions. You can use this docuemnt as an outline and refer to the github issues for more details.
 
-At a high level, we will use a framework library called [open zeppelin]() to create a simple [ERC-721 NFT]() contract and deploy it to the [rinkeby test network](https://www.rinkeby.io/#stats). We will extend the open zeppelin base ERC721 contracts with custom business logic for our token mint. 
+At a high level, we will use a framework library called [open zeppelin](https://openzeppelin.com/) to create a simple [ERC-721 NFT](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/) contract and deploy it to the [rinkeby test network](https://www.rinkeby.io/#stats). We will extend the open zeppelin base ERC721 contracts with custom business logic for our token mint. 
 
 Our token mint will include 1000 NFT tokens. The first 100 of the tokens are fixed and will be reserved for the team while the other 900 are randomly generated and will be purchaseable publically for .08 ETH each. The public purchase function will not be available right away and minting will not start until a designated time. Also the artwork will be hidden from users until after all of the items are sold out. This is a common pattern to use to ensure fairness so that users cannot game the blockchain to select their favorite generated NFT's (usually the "rare" ones). 
 
