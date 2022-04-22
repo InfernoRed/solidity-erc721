@@ -13,11 +13,7 @@ contract HelperLibraryTest {
         return Helpers.concatenateStrings(self, other);
     }
 
-    function getUri(string memory self)
-        public
-        pure
-        returns (string memory)
-    {
+    function getUri(string memory self) public pure returns (string memory) {
         return Helpers.getUri(self);
     }
 }
