@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter mocha-junit-reporter --timeout 60000 --exit",
-    "lint": "eslint --ext .ts,.js,.json,.sol .",
+    "lint": "eslint --ext .ts,.js,.json .",
+    "prettier": "prettier --write '**/*.{ts,js,json,sol}'",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -49,8 +50,14 @@
   },
   "lint-staged": {
     "*.{ts,js,json,sol}": [
-      "eslint --cache --fix",
+      "prettier --write",
       "npx hardhat test"
+    ],
+    "*.{ts,js,json}": [
+      "eslint --cache --fix"
+    ],
+    "*.sol": [
+      "solhint --fix"
     ]
   }
 }
